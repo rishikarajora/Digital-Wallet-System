@@ -33,14 +33,20 @@ A secure and feature - rich backend for a digital wallet system, designed to han
 ## 📦 Folder Structure 
 
 wallet-system/
-├── models/
-│   └── user.js
-├── routes/
-│   └── auth.js
-├── .env
-├── index.js
-├── package.json
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── index.js
+│   ├── package.json
+│   └── ...
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── ...
+├── .gitignore
 └── README.md
+
 
 
 ## 🔧 Setup Instructions
