@@ -1,11 +1,49 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
+const transactionSchema = new mongoose.Schema({
+  type: {
+    type: String,
+    enum: ['deposit', 'withdraw', 'transfer'],
+    required: true,
+  },
+  amount: {
+    type: Number,
+    required: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+  details: {
+    type: String, // Additional info like recipient user ID for transfers
+  },
+});
+
 const userSchema = new mongoose.Schema({
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-  balance: { type: Number, default: 0 },
-  createdAt: { type: Date, default: Date.now }
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+
+  password: {
+    type: String,
+    required: true,
+  },
+
+  balance: {
+    type: Number,
+    default: 0,
+  },
+
+  transactions: [transactionSchema],
 });
 
 userSchema.pre('save', async function (next) {
