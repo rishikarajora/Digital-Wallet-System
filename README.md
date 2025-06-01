@@ -1,3 +1,4 @@
+
 # 💰 Digital Wallet System Backend
 A secure and feature - rich backend for a digital wallet system, designed to handle user authentication, virtual cash management, fraud transfers, and basic fraud detection.
 
@@ -72,7 +73,11 @@ wallet-system/
 - `POST /deposit` – Deposit funds  
 - `POST /withdraw` – Withdraw funds  
 - `POST /transfer` – Transfer to another user  
-- `GET /transactions` – View transaction history  
+- `GET /transactions` – View transaction history
+
+### Frontend
+The frontend provides a user-friendly interface to interact with the wallet system.
+https://wallkart.vercel.app/
 
 
 
