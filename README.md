@@ -32,6 +32,7 @@ A secure and feature - rich backend for a digital wallet system, designed to han
 
 ## 📦 Folder Structure 
 
+```
 wallet-system/
 ├── backend/
 │   ├── models/
@@ -46,6 +47,7 @@ wallet-system/
 │   └── ...
 ├── .gitignore
 └── README.md
+```
 
 
 
